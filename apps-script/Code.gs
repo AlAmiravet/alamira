@@ -1,14 +1,3 @@
-/**
- * Al Amira: booking inbox
- *
- * Receives booking requests from the website and files them in this Google Sheet:
- *   - "Bookings": one row per request (newest at the bottom), with a Status dropdown.
- *   - "Clients":  one row per client (matched by phone number), with animals and request counts.
- *
- * Only the owner's name, phone and reason are required. Animal type, animal name, date and
- * time may be empty. Setup steps are in README.md. Paste this whole file into Extensions > Apps Script.
- */
-
 const CONFIG = {
   // Optional: an email address that gets a message for every new request. Leave "" for none.
   NOTIFY_EMAIL: "abdallahjtr@proton.me",

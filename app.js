@@ -1,9 +1,5 @@
 (function () {
   "use strict";
-
-  /* The page texts live in the HTML itself (one page per language). This script only
-     handles the booking form, the copy buttons and the screenshot viewer. The few texts
-     it needs come from the JSON block with id "i18n" that the build writes into each page. */
   var I;
   try { I = JSON.parse(document.getElementById("i18n").textContent); } catch (e) { return; }
   var ui = I.ui, staff = I.staff;
@@ -34,7 +30,7 @@
 
   function waLink(d) {
     var msg = ui.waGeneric + "\n" + detailRows(d).map(function (r) { return r[0] + ": " + r[1]; }).join("\n");
-    return "https://wa.me/213774090745" + form.getAttribute("data-wa") + "?text=" + encodeURIComponent(msg);
+    return "https://wa.me/" + form.getAttribute("data-wa") + "?text=" + encodeURIComponent(msg);
   }
 
   function renderResult() {
