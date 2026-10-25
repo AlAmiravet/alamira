@@ -1,4 +1,3 @@
-// The page layout. One template produces all three language pages (see scripts/build.mjs).
 import { T, UI_KEYS, OPTION_KEYS } from "./content.mjs";
 
 const IDX = { en: 0, fr: 1, ar: 2 };
