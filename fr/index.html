@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="fr" dir="ltr">
 <head>
+  <script>
+    if (window.location.pathname.endsWith('/index.html') || 
+        window.location.pathname.endsWith('index.html')) {
+      window.location.replace('/');
+    }
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   
@@ -23,7 +29,7 @@
   <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Readex+Pro:wght@300..700&display=swap">
   <link rel="stylesheet" href="../styles.css">
-  
+
   <link rel="alternate" hreflang="ar" href="https://alamiravet.com/" />
   <link rel="alternate" hreflang="fr" href="https://alamiravet.com/fr/" />
   <link rel="alternate" hreflang="en" href="https://alamiravet.com/en/" />
