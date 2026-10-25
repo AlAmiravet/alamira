@@ -1,0 +1,18 @@
+/* Queue page. Builds on styles.css (header, background, buttons). */
+.qmain { padding-block: 1.5rem 3rem; max-width: 720px; }
+.qmain h1 { font-size: clamp(1.7rem, 6vw, 2.6rem); margin-block: 0.3rem 0.5rem; }
+.qmain h2 { font-size: 1.1rem; margin-block: 1.6rem 0.7rem; }
+.qlead { color: var(--muted); margin: 0 0 0.5rem; }
+.qcount { color: var(--muted); font-weight: 500; font-size: 0.95rem; }
+.qlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+.qnow-list { display: grid; gap: 0.6rem; }
+.qcard { display: flex; align-items: center; gap: 0.9rem; padding: 0.75rem 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+.qcard-now { background: var(--tint); border-color: var(--cyan); }
+.qnum { flex: none; min-width: 3.1rem; height: 3.1rem; display: grid; place-items: center; border-radius: 14px; background: var(--cyan-deep); color: #fff; font: 700 1.3rem var(--font-display); padding-inline: 0.4rem; }
+.qtxt { display: grid; gap: 0.1rem; min-width: 0; }
+.qtxt b { overflow-wrap: anywhere; }
+.qtxt small { color: var(--muted); }
+.qempty, .qstatus { color: var(--muted); margin: 0.2rem 0; }
+.qerr { color: #9B1C1C; }
+.qactions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; }
+.qnote { color: var(--muted); font-size: 0.85rem; margin-top: 1rem; }
