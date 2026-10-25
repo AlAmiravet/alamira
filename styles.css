@@ -1,6 +1,3 @@
-/* Layout, mobile first: one column on phones with a fixed WhatsApp/Call bar at the bottom; from 720px the bar goes away, from 900px the nav and two-column layouts appear. Cyan and white only. Logical properties throughout so Arabic (RTL) is the default direction. */
-
-/* Custom font slot: drop a font file at assets/fonts/custom.woff2 (see README). If the file is missing the browser silently uses the fallback fonts below. */
 @font-face {
   font-family: "Al Amira Custom";
   src: url("assets/fonts/custom.woff2") format("woff2"), url("assets/fonts/custom.woff") format("woff"), url("assets/fonts/custom.ttf") format("truetype");
