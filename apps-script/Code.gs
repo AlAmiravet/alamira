@@ -1,6 +1,6 @@
 const CONFIG = {
   // Optional: an email address that gets a message for every new request. Leave "" for none.
-  NOTIFY_EMAIL: "abdallahjtr@proton.me",
+  NOTIFY_EMAIL: "",
 
   BOOKINGS_SHEET: "Bookings",
   CLIENTS_SHEET: "Clients",
