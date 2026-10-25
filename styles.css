@@ -1,3 +1,6 @@
+/* Layout, mobile first: one column on phones with a fixed WhatsApp/Call bar at the bottom; from 720px the bar goes away, from 900px the nav and two-column layouts appear. Cyan and white only. Logical properties throughout so Arabic (RTL) is the default direction. */
+
+/* Custom font slot: drop a font file at assets/fonts/custom.woff2 (see README). If the file is missing the browser silently uses the fallback fonts below. */
 @font-face {
   font-family: "Al Amira Custom";
   src: url("assets/fonts/custom.woff2") format("woff2"), url("assets/fonts/custom.woff") format("woff"), url("assets/fonts/custom.ttf") format("truetype");
@@ -105,7 +108,7 @@ html[lang="ar"] .brand b { letter-spacing: 0; font-size: 1.3rem; }
 
 /* Sections */
 .sec { padding-block: 2.75rem; }
-.sec.alt { background: var(--tint); }
+.sec.alt { background: rgba(232, 249, 252, 0.7); }
 .sec-head { display: grid; gap: 0.5rem; max-width: 62ch; margin-bottom: 1.5rem; }
 .sec-head p { color: var(--muted); }
 .grid { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
@@ -162,6 +165,10 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px
 /* Contact */
 .contact { display: grid; gap: 1.5rem; }
 .contact .sec-head { margin-bottom: 1rem; }
+.place { margin: 0 0 1.1rem; font-size: 1.35rem; line-height: 1.5; }
+.place a { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); text-decoration: underline; text-decoration-color: var(--cyan); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.place a:hover { color: var(--cyan-deep); }
+.place img { width: 28px; height: 28px; flex: none; }
 .info { display: grid; }
 .info-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 1rem; padding-block: 0.85rem; border-bottom: 1px solid var(--line); }
 .info-row:first-child { border-top: 1px solid var(--line); }
@@ -227,4 +234,17 @@ footer { border-top: 1px solid var(--line); padding-block: 1.4rem; font-size: 0.
   .form .btn { width: auto; }
 }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } }
+/* Slow, relaxing background: four soft cyan lights drifting behind the page. Only transforms are animated, so it costs almost nothing. */
+.bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; background: linear-gradient(180deg, #FFFFFF 0%, #F1FBFD 100%); }
+.bg span { position: absolute; border-radius: 50%; will-change: transform; }
+.bg span:nth-child(1) { width: 78vmax; height: 78vmax; left: -26vmax; top: -30vmax; background: radial-gradient(circle, rgba(0, 188, 212, 0.26) 0%, rgba(0, 188, 212, 0) 66%); animation: drift-a 58s ease-in-out infinite alternate; }
+.bg span:nth-child(2) { width: 70vmax; height: 70vmax; right: -24vmax; top: 18vh; background: radial-gradient(circle, rgba(77, 208, 225, 0.30) 0%, rgba(77, 208, 225, 0) 66%); animation: drift-b 72s ease-in-out infinite alternate; animation-delay: -20s; }
+.bg span:nth-child(3) { width: 62vmax; height: 62vmax; left: 8vw; bottom: -30vmax; background: radial-gradient(circle, rgba(128, 222, 234, 0.38) 0%, rgba(128, 222, 234, 0) 66%); animation: drift-c 66s ease-in-out infinite alternate; animation-delay: -35s; }
+.bg span:nth-child(4) { width: 46vmax; height: 46vmax; right: 12vw; top: -18vmax; background: radial-gradient(circle, rgba(0, 151, 167, 0.16) 0%, rgba(0, 151, 167, 0) 66%); animation: drift-d 84s ease-in-out infinite alternate; animation-delay: -50s; }
+@keyframes drift-a { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(22vmax, 16vmax, 0) scale(1.18); } }
+@keyframes drift-b { from { transform: translate3d(0, 0, 0) scale(1.1); } to { transform: translate3d(-24vmax, 12vmax, 0) scale(0.92); } }
+@keyframes drift-c { from { transform: translate3d(0, 0, 0) scale(0.95); } to { transform: translate3d(20vmax, -18vmax, 0) scale(1.15); } }
+@keyframes drift-d { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(-16vmax, 20vmax, 0) scale(1.25); } }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } .bg span:nth-child(n) { animation: none; } }
+.foot-queue { color: var(--cyan-deep); font-weight: 600; text-underline-offset: 3px; }
