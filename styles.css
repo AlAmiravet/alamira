@@ -254,3 +254,10 @@ footer { border-top: 1px solid var(--line); padding-block: 1.4rem; font-size: 0.
   .links { flex-wrap: nowrap; justify-content: flex-start; }
   .foot { flex-direction: row; justify-content: space-between; text-align: start; }
 }
+.links { display: flex !important; flex: 1 0 100%; order: 3; flex-wrap: wrap; justify-content: center; overflow: visible; gap: 0.35rem; }
+.foot { justify-content: center; text-align: center; flex-direction: column; }
+
+@media (min-width: 900px) {
+  .links { flex: none; order: 0; flex-wrap: nowrap; justify-content: flex-start; }
+  .foot { flex-direction: row; justify-content: space-between; text-align: start; }
+}

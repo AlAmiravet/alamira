@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>File d&#39;attente du jour · Al Amira</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#00BCD4">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../../assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Readex+Pro:wght@300..700&display=swap">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../queue.css">
+</head>
+<body class="qpage">
+<div class="bg" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../">
+      <img src="../../assets/icons/logo.svg" width="40" height="40" alt="">
+      <span><b>Al Amira</b><small>Clinique vétérinaire</small></span>
+    </a>
+    <nav class="lang" aria-label="Langue">
+      <a href="../../queue/" hreflang="ar" lang="ar" aria-label="العربية">AR</a>
+      <a href="../../fr/queue/" hreflang="fr" lang="fr" aria-current="page" aria-label="Français">FR</a>
+      <a href="../../en/queue/" hreflang="en" lang="en" aria-label="English">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap qmain" id="main">
+  <p class="eyebrow">Mis à jour: <span id="qUpdated" class="ltr">–</span></p>
+  <h1>File d&#39;attente du jour</h1>
+  <p class="qlead">Repérez votre numéro pour savoir combien de personnes vous précèdent. La liste se met à jour toute seule.</p>
+
+  <section class="qnow" aria-labelledby="qNowH">
+    <h2 id="qNowH">En consultation</h2>
+    <div id="qNow" class="qnow-list" aria-live="polite"></div>
+  </section>
+
+  <section aria-labelledby="qWaitH">
+    <h2 id="qWaitH">En attente <span id="qCount" class="qcount"></span></h2>
+    <p id="qStatus" class="qstatus" role="status">Chargement…</p>
+    <ol id="qList" class="qlist"></ol>
+  </section>
+
+  <div class="qactions">
+    <button type="button" class="btn btn-sm" id="qRefresh">Actualiser</button>
+    <a class="btn btn-sm btn-ghost" href="../">Retour au site</a>
+  </div>
+  <p class="qnote">Seuls les numéros de passage sont affichés, jamais les noms ni les téléphones.</p>
+  <noscript><p class="qnote">Cette page nécessite JavaScript pour afficher la file.</p></noscript>
+</main>
+
+<script type="application/json" id="qdata">{"lang":"fr","scriptUrl":"https://script.google.com/macros/s/AKfycbxf0gnZluAVJV7PXu_VzBcLkNo-oV8Ai183DlBj-3ok8gJTbDZksgYTmlLuf4XSDa_ygQ/exec","locale":"fr-FR","ui":{"title":"File d'attente du jour · Al Amira","h":"File d'attente du jour","lead":"Repérez votre numéro pour savoir combien de personnes vous précèdent. La liste se met à jour toute seule.","back":"Retour au site","now":"En consultation","waiting":"En attente","none":"Personne dans la file pour le moment.","noneNow":"Aucune consultation en cours.","number":"N°","updated":"Mis à jour","refresh":"Actualiser","loading":"Chargement…","err":"Impossible de charger la file. Vérifiez votre connexion ou appelez-nous.","ahead":"avant vous","sNew":"En attente","sConfirmed":"Confirmé","sProg":"En cours","privacy":"Seuls les numéros de passage sont affichés, jamais les noms ni les téléphones.","noScript":"Cette page nécessite JavaScript pour afficher la file."},"words":{"Dog":"Chien","Cat":"Chat","Bird":"Oiseau","Rabbit":"Lapin","Horse":"Cheval","Cow":"Vache","Camel":"Chameau","Sheep":"Mouton","Goat":"Chèvre","Other":"Autre","Check-up":"Consultation","Vaccination":"Vaccination","Surgery or spay/neuter":"Chirurgie ou stérilisation","Dental care":"Soins dentaires","My animal seems unwell":"Mon animal semble malade","Morning (08:30–12:00)":"Matin (08:30–12:00)","Midday (12:00–14:00)":"Midi (12:00–14:00)","Afternoon (14:00–16:00)":"Après-midi (14:00–16:00)"}}</script>
+<script src="../../queue.js" defer></script>
+</body>
+</html>

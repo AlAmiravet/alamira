@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>دور اليوم · الأميرة</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#00BCD4">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Readex+Pro:wght@300..700&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../queue.css">
+</head>
+<body class="qpage">
+<div class="bg" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../">
+      <img src="../assets/icons/logo.svg" width="40" height="40" alt="">
+      <span><b>الأميرة</b><small>عيادة بيطرية</small></span>
+    </a>
+    <nav class="lang" aria-label="اللغة">
+      <a href="../queue/" hreflang="ar" lang="ar" aria-current="page" aria-label="العربية">AR</a>
+      <a href="../fr/queue/" hreflang="fr" lang="fr" aria-label="Français">FR</a>
+      <a href="../en/queue/" hreflang="en" lang="en" aria-label="English">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap qmain" id="main">
+  <p class="eyebrow">آخر تحديث: <span id="qUpdated" class="ltr">–</span></p>
+  <h1>دور اليوم</h1>
+  <p class="qlead">ابحث عن رقمك لتعرف كم شخصًا قبلك. تتحدّث القائمة تلقائيًا.</p>
+
+  <section class="qnow" aria-labelledby="qNowH">
+    <h2 id="qNowH">الدور الحالي</h2>
+    <div id="qNow" class="qnow-list" aria-live="polite"></div>
+  </section>
+
+  <section aria-labelledby="qWaitH">
+    <h2 id="qWaitH">في الانتظار <span id="qCount" class="qcount"></span></h2>
+    <p id="qStatus" class="qstatus" role="status">جارٍ التحميل…</p>
+    <ol id="qList" class="qlist"></ol>
+  </section>
+
+  <div class="qactions">
+    <button type="button" class="btn btn-sm" id="qRefresh">تحديث</button>
+    <a class="btn btn-sm btn-ghost" href="../">العودة إلى الموقع</a>
+  </div>
+  <p class="qnote">تُعرض هنا أرقام الدور فقط، دون أسماء أو أرقام هواتف.</p>
+  <noscript><p class="qnote">تحتاج هذه الصفحة إلى جافاسكربت لعرض القائمة.</p></noscript>
+</main>
+
+<script type="application/json" id="qdata">{"lang":"ar","scriptUrl":"https://script.google.com/macros/s/AKfycbxf0gnZluAVJV7PXu_VzBcLkNo-oV8Ai183DlBj-3ok8gJTbDZksgYTmlLuf4XSDa_ygQ/exec","locale":"ar-DZ-u-nu-latn","ui":{"title":"دور اليوم · الأميرة","h":"دور اليوم","lead":"ابحث عن رقمك لتعرف كم شخصًا قبلك. تتحدّث القائمة تلقائيًا.","back":"العودة إلى الموقع","now":"الدور الحالي","waiting":"في الانتظار","none":"لا أحد في قائمة الانتظار حاليًا.","noneNow":"لا توجد حالة قيد الفحص الآن.","number":"رقم","updated":"آخر تحديث","refresh":"تحديث","loading":"جارٍ التحميل…","err":"تعذّر تحميل القائمة. تحقّق من الاتصال أو اتصل بنا.","ahead":"قبلك","sNew":"في الانتظار","sConfirmed":"مؤكد","sProg":"قيد الفحص","privacy":"تُعرض هنا أرقام الدور فقط، دون أسماء أو أرقام هواتف.","noScript":"تحتاج هذه الصفحة إلى جافاسكربت لعرض القائمة."},"words":{"Dog":"كلب","Cat":"قط","Bird":"طائر","Rabbit":"أرنب","Horse":"حصان","Cow":"بقرة","Camel":"جمل","Sheep":"غنم","Goat":"ماعز","Other":"أخرى","Check-up":"فحص عام","Vaccination":"تطعيم","Surgery or spay/neuter":"جراحة أو تعقيم","Dental care":"العناية بالأسنان","My animal seems unwell":"حيواني يبدو مريضًا","Morning (08:30–12:00)":"صباحًا (08:30–12:00)","Midday (12:00–14:00)":"ظهرًا (12:00–14:00)","Afternoon (14:00–16:00)":"عصرًا (14:00–16:00)"}}</script>
+<script src="../queue.js" defer></script>
+</body>
+</html>

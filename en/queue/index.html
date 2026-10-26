@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Today&#39;s queue · Al Amira</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#00BCD4">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../../assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Readex+Pro:wght@300..700&display=swap">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../queue.css">
+</head>
+<body class="qpage">
+<div class="bg" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../">
+      <img src="../../assets/icons/logo.svg" width="40" height="40" alt="">
+      <span><b>Al Amira</b><small>Veterinary clinic</small></span>
+    </a>
+    <nav class="lang" aria-label="Language">
+      <a href="../../queue/" hreflang="ar" lang="ar" aria-label="العربية">AR</a>
+      <a href="../../fr/queue/" hreflang="fr" lang="fr" aria-label="Français">FR</a>
+      <a href="../../en/queue/" hreflang="en" lang="en" aria-current="page" aria-label="English">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap qmain" id="main">
+  <p class="eyebrow">Updated: <span id="qUpdated" class="ltr">–</span></p>
+  <h1>Today&#39;s queue</h1>
+  <p class="qlead">Find your number to see how many are ahead of you. The list updates by itself.</p>
+
+  <section class="qnow" aria-labelledby="qNowH">
+    <h2 id="qNowH">Now being seen</h2>
+    <div id="qNow" class="qnow-list" aria-live="polite"></div>
+  </section>
+
+  <section aria-labelledby="qWaitH">
+    <h2 id="qWaitH">Waiting <span id="qCount" class="qcount"></span></h2>
+    <p id="qStatus" class="qstatus" role="status">Loading…</p>
+    <ol id="qList" class="qlist"></ol>
+  </section>
+
+  <div class="qactions">
+    <button type="button" class="btn btn-sm" id="qRefresh">Refresh</button>
+    <a class="btn btn-sm btn-ghost" href="../">Back to the website</a>
+  </div>
+  <p class="qnote">Only queue numbers are shown here, never names or phone numbers.</p>
+  <noscript><p class="qnote">This page needs JavaScript to show the queue.</p></noscript>
+</main>
+
+<script type="application/json" id="qdata">{"lang":"en","scriptUrl":"https://script.google.com/macros/s/AKfycbxf0gnZluAVJV7PXu_VzBcLkNo-oV8Ai183DlBj-3ok8gJTbDZksgYTmlLuf4XSDa_ygQ/exec","locale":"en-GB","ui":{"title":"Today's queue · Al Amira","h":"Today's queue","lead":"Find your number to see how many are ahead of you. The list updates by itself.","back":"Back to the website","now":"Now being seen","waiting":"Waiting","none":"Nobody in the queue right now.","noneNow":"No one is being seen at the moment.","number":"No.","updated":"Updated","refresh":"Refresh","loading":"Loading…","err":"Could not load the queue. Please check your connection, or call us.","ahead":"ahead of you","sNew":"Waiting","sConfirmed":"Confirmed","sProg":"In progress","privacy":"Only queue numbers are shown here, never names or phone numbers.","noScript":"This page needs JavaScript to show the queue."},"words":{"Dog":"Dog","Cat":"Cat","Bird":"Bird","Rabbit":"Rabbit","Horse":"Horse","Cow":"Cow","Camel":"Camel","Sheep":"Sheep","Goat":"Goat","Other":"Other","Check-up":"Check-up","Vaccination":"Vaccination","Surgery or spay/neuter":"Surgery or spay/neuter","Dental care":"Dental care","My animal seems unwell":"My animal seems unwell","Morning (08:30–12:00)":"Morning (08:30–12:00)","Midday (12:00–14:00)":"Midday (12:00–14:00)","Afternoon (14:00–16:00)":"Afternoon (14:00–16:00)"}}</script>
+<script src="../../queue.js" defer></script>
+</body>
+</html>
