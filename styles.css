@@ -248,3 +248,9 @@ footer { border-top: 1px solid var(--line); padding-block: 1.4rem; font-size: 0.
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } .bg span:nth-child(n) { animation: none; } }
 .foot-queue { color: var(--cyan-deep); font-weight: 600; text-underline-offset: 3px; }
+.links { flex-wrap: wrap; justify-content: center; overflow: visible; }
+.foot { justify-content: center; text-align: center; flex-direction: column; }
+@media (min-width: 900px) {
+  .links { flex-wrap: nowrap; justify-content: flex-start; }
+  .foot { flex-direction: row; justify-content: space-between; text-align: start; }
+}
