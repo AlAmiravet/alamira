@@ -29,7 +29,7 @@ html[lang="ar"] { --font-display: "Al Amira Custom", "Readex Pro", system-ui, sa
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+html { scroll-behavior: smooth; scroll-padding-top: 112px; }
 body {
   margin: 0;
   background: var(--bg);
@@ -72,14 +72,16 @@ html[lang="ar"] .eyebrow { letter-spacing: 0; font-size: 0.92rem; }
 
 /* Header */
 .top { position: sticky; top: 0; z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
-.bar { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding-block: 0.55rem; }
+.bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.4rem 0.75rem; padding-block: 0.55rem 0.35rem; }
 .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); min-width: 0; }
 .brand img { width: 40px; height: 40px; border-radius: 12px; flex: none; }
 .brand b { font: 700 1.2rem/1.1 var(--font-display); letter-spacing: -0.02em; display: block; }
 html[lang="ar"] .brand b { letter-spacing: 0; font-size: 1.3rem; }
 .brand small { font-size: 0.72rem; color: var(--muted); display: block; line-height: 1.3; }
-.links { display: none; gap: 1.25rem; }
-.links a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+/* Phones: the menu is a second row that scrolls sideways if it does not fit */
+.links { display: flex; order: 3; flex: 1 0 100%; gap: 0.35rem; overflow-x: auto; scrollbar-width: none; padding-bottom: 0.2rem; }
+.links::-webkit-scrollbar { display: none; }
+.links a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.92rem; white-space: nowrap; padding: 0.45rem 0.8rem; min-height: 38px; display: inline-flex; align-items: center; border-radius: 999px; background: var(--tint); }
 .links a:hover { color: var(--cyan-deep); }
 .lang { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--tint); gap: 2px; flex: none; }
 .lang a { display: inline-flex; align-items: center; justify-content: center; color: var(--ink); text-decoration: none; font: 600 0.82rem/1 var(--font-body); min-width: 42px; min-height: 38px; padding: 0 0.6rem; border-radius: 999px; }
@@ -217,7 +219,9 @@ footer { border-top: 1px solid var(--line); padding-block: 1.4rem; font-size: 0.
   html { scroll-padding-top: 88px; }
   .bar { padding-block: 0.7rem; gap: 1.25rem; }
   .brand { margin-inline-end: auto; }
-  .links { display: flex; }
+  .links { order: 0; flex: none; overflow: visible; gap: 1.25rem; padding: 0; }
+  .links a { background: none; padding: 0; min-height: 0; font-size: 0.95rem; }
+  .bar { flex-wrap: nowrap; }
   .top .btn { display: inline-flex; }
   .hero { padding-block: 4rem 4.5rem; }
   .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 3.5rem; align-items: center; }
@@ -247,17 +251,15 @@ footer { border-top: 1px solid var(--line); padding-block: 1.4rem; font-size: 0.
 @keyframes drift-d { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(-16vmax, 20vmax, 0) scale(1.25); } }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } .bg span:nth-child(n) { animation: none; } }
-/* Header on phones: logo + language on the first row, menu on a second row */
-.bar { flex-wrap: wrap; row-gap: 0.4rem; }
-.links { display: flex; order: 3; flex: 1 0 100%; flex-wrap: wrap; justify-content: center; gap: 0.4rem; }
-.links a { padding: 0.45rem 0.8rem; min-height: 38px; display: inline-flex; align-items: center; border-radius: 999px; background: var(--tint); }
+.foot-queue { color: var(--cyan-deep); font-weight: 600; text-underline-offset: 3px; }
 
-/* Footer centered */
-.foot { flex-direction: column; justify-content: center; text-align: center; }
-
-/* Desktop */
-@media (min-width: 900px) {
-  .links { order: 0; flex: none; flex-wrap: nowrap; justify-content: flex-start; gap: 1.25rem; }
-  .links a { padding: 0; min-height: 0; background: none; }
-  .foot { flex-direction: row; justify-content: space-between; text-align: start; }
+/* Phones: a smaller, one-line menu that slides away while scrolling down */
+@media (max-width: 899px) {
+  body { overflow-anchor: none; }
+  .links { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; gap: 0.3rem; max-height: 40px; opacity: 1; transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease; }
+  .links::-webkit-scrollbar { display: none; }
+  .links a { font-size: 0.8rem; min-height: 30px; padding: 0.2rem 0.65rem; flex: none; }
+  .top.menu-away .links { max-height: 0; opacity: 0; padding-block: 0; overflow: hidden; pointer-events: none; }
+  .top.menu-away .bar { row-gap: 0; }
 }
+@media (prefers-reduced-motion: reduce) { .links { transition: none; } }
