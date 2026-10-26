@@ -247,17 +247,17 @@ footer { border-top: 1px solid var(--line); padding-block: 1.4rem; font-size: 0.
 @keyframes drift-d { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(-16vmax, 20vmax, 0) scale(1.25); } }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } .bg span:nth-child(n) { animation: none; } }
-.foot-queue { color: var(--cyan-deep); font-weight: 600; text-underline-offset: 3px; }
-.links { flex-wrap: wrap; justify-content: center; overflow: visible; }
-.foot { justify-content: center; text-align: center; flex-direction: column; }
-@media (min-width: 900px) {
-  .links { flex-wrap: nowrap; justify-content: flex-start; }
-  .foot { flex-direction: row; justify-content: space-between; text-align: start; }
-}
-.links { display: flex !important; flex: 1 0 100%; order: 3; flex-wrap: wrap; justify-content: center; overflow: visible; gap: 0.35rem; }
-.foot { justify-content: center; text-align: center; flex-direction: column; }
+/* Header on phones: logo + language on the first row, menu on a second row */
+.bar { flex-wrap: wrap; row-gap: 0.4rem; }
+.links { display: flex; order: 3; flex: 1 0 100%; flex-wrap: wrap; justify-content: center; gap: 0.4rem; }
+.links a { padding: 0.45rem 0.8rem; min-height: 38px; display: inline-flex; align-items: center; border-radius: 999px; background: var(--tint); }
 
+/* Footer centered */
+.foot { flex-direction: column; justify-content: center; text-align: center; }
+
+/* Desktop */
 @media (min-width: 900px) {
-  .links { flex: none; order: 0; flex-wrap: nowrap; justify-content: flex-start; }
+  .links { order: 0; flex: none; flex-wrap: nowrap; justify-content: flex-start; gap: 1.25rem; }
+  .links a { padding: 0; min-height: 0; background: none; }
   .foot { flex-direction: row; justify-content: space-between; text-align: start; }
 }
