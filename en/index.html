@@ -38,7 +38,6 @@
     </a>
     <nav class="links" aria-label="Main">
       <a href="#services">Services</a>
-      <a href="/en/queue/">Waiting Queue</a>
       <a href="#vaccines">Vaccines</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -47,7 +46,6 @@
       <a href="../fr/" hreflang="fr" lang="fr" aria-label="Français">FR</a>
       <a href="" hreflang="en" lang="en" aria-label="English" aria-current="page">EN</a>
     </nav>
-    <a class="btn btn-sm" href="#book">Book a visit</a>
   </div>
 </header>
 
@@ -59,8 +57,7 @@
         <h1>Caring for your animals like family.</h1>
         <p class="lead">Check-ups, vaccines and surgery for pets, horses, cows, camels, sheep and goats.</p>
         <div class="cta-row">
-          <a class="btn" href="#book">Book an appointment</a>
-          <a class="btn btn-ghost" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="../assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>Book on WhatsApp</span></a>
+          <a class="btn" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="../assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>Book on WhatsApp</span></a>
         </div>
       </div>
       <div class="hero-art">
@@ -111,68 +108,6 @@
     </div>
   </section>
 
-  <section class="sec" id="book">
-    <div class="wrap book">
-      <div>
-        <div class="sec-head">
-          <p class="eyebrow">Book a visit</p>
-          <h2>Book a visit</h2>
-          <p>Tell us what your animal needs. We confirm your time by phone or WhatsApp.</p>
-        </div>
-        <a class="btn btn-ghost" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="../assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>Book on WhatsApp</span></a>
-      </div>
-      <form class="form" id="bookForm" autocomplete="on" data-endpoint="https://script.google.com/macros/s/AKfycby089XbqTr5e4kr5ktyKQAH43PGObQZ3fJ3onuJuFpIUr0BAvD4jPOFTrBCNZyT_2rZ/exec" data-wa="213673057556">
-        <label class="field" for="f-owner"><span>Your name</span><input id="f-owner" name="owner" type="text" autocomplete="name" maxlength="80" required></label>
-        <label class="field" for="f-phone"><span>Phone</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" maxlength="30" pattern="[0-9+ ]{8,30}" required></label>
-        <label class="field" for="f-ptype"><span>Animal type <span class="opt">(optional)</span></span>
-          <select id="f-ptype" name="ptype">
-            <option value="">Choose…</option>
-            <option value="pDog">Dog</option>
-            <option value="pCat">Cat</option>
-            <option value="pBird">Bird</option>
-            <option value="pRabbit">Rabbit</option>
-            <option value="pHorse">Horse</option>
-            <option value="pCow">Cow</option>
-            <option value="pCamel">Camel</option>
-            <option value="pSheep">Sheep</option>
-            <option value="pGoat">Goat</option>
-            <option value="pOther">Other</option>
-          </select></label>
-        <label class="field" for="f-pname"><span>Animal's name <span class="opt">(optional)</span></span><input id="f-pname" name="pname" type="text" maxlength="60"></label>
-        <label class="field full" for="f-reason"><span>Reason for visit</span>
-          <select id="f-reason" name="reason" required>
-            <option value="">Choose…</option>
-            <option value="rCheck">Check-up</option>
-            <option value="rVacc">Vaccination</option>
-            <option value="rSurg">Surgery or spay/neuter</option>
-            <option value="rDent">Dental care</option>
-            <option value="rSick">My animal seems unwell</option>
-          </select></label>
-        <label class="field" for="f-date"><span>Preferred date <span class="opt">(optional)</span></span><input id="f-date" name="date" type="date"></label>
-        <label class="field" for="f-time"><span>Preferred time <span class="opt">(optional)</span></span>
-          <select id="f-time" name="time">
-            <option value="">Choose…</option>
-            <option value="tmAm">Morning (08:30–12:00)</option>
-            <option value="tmPm">Midday (12:00–14:00)</option>
-            <option value="tmEve">Afternoon (14:00–16:00)</option>
-          </select></label>
-        <label class="field full" for="f-notes"><span>Notes <span class="opt">(optional)</span></span><textarea id="f-notes" name="notes" maxlength="500"></textarea></label>
-        <div class="hp" aria-hidden="true"><label for="f-website">Website<input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
-        <div class="full">
-          <button class="btn" id="submitBtn" type="submit">Request appointment</button>
-          <p class="privacy">We use your details only to arrange your visit.</p>
-        </div>
-        <div class="result" id="result" role="status" aria-live="polite" hidden>
-          <h3 id="resH"></h3>
-          <dl id="resList"></dl>
-          <p class="note flush" id="resNote"></p>
-          <div class="actions">
-            <a class="btn btn-ghost btn-sm" id="resWa" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer">Send details on WhatsApp</a>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
 
   <section class="sec alt" id="contact">
     <div class="wrap contact">

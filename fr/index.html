@@ -39,7 +39,6 @@
     </a>
     <nav class="links" aria-label="Principal">
       <a href="#services">Services</a>
-      <a href="/fr/queue/">Liste d'attente</a>
       <a href="#vaccines">Vaccins</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -48,7 +47,6 @@
       <a href="" hreflang="fr" lang="fr" aria-label="Français" aria-current="page">FR</a>
       <a href="../en/" hreflang="en" lang="en" aria-label="English">EN</a>
     </nav>
-    <a class="btn btn-sm" href="#book">Rendez-vous</a>
   </div>
 </header>
 
@@ -60,8 +58,7 @@
         <h1>Nous soignons vos animaux comme des membres de la famille.</h1>
         <p class="lead">Consultations, vaccins et chirurgie pour animaux de compagnie, chevaux, vaches, chameaux, moutons et chèvres.</p>
         <div class="cta-row">
-          <a class="btn" href="#book">Prendre rendez-vous</a>
-          <a class="btn btn-ghost" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="../assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>Réserver sur WhatsApp</span></a>
+          <a class="btn" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="../assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>Réserver sur WhatsApp</span></a>
         </div>
       </div>
       <div class="hero-art">
@@ -112,68 +109,6 @@
     </div>
   </section>
 
-  <section class="sec" id="book">
-    <div class="wrap book">
-      <div>
-        <div class="sec-head">
-          <p class="eyebrow">Rendez-vous</p>
-          <h2>Prendre rendez-vous</h2>
-          <p>Dites-nous ce dont votre animal a besoin. Nous confirmons l'horaire par téléphone ou WhatsApp.</p>
-        </div>
-        <a class="btn btn-ghost" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="../assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>Réserver sur WhatsApp</span></a>
-      </div>
-      <form class="form" id="bookForm" autocomplete="on" data-endpoint="https://script.google.com/macros/s/AKfycby089XbqTr5e4kr5ktyKQAH43PGObQZ3fJ3onuJuFpIUr0BAvD4jPOFTrBCNZyT_2rZ/exec" data-wa="213673057556">
-        <label class="field" for="f-owner"><span>Votre nom</span><input id="f-owner" name="owner" type="text" autocomplete="name" maxlength="80" required></label>
-        <label class="field" for="f-phone"><span>Téléphone</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" maxlength="30" pattern="[0-9+ ]{8,30}" required></label>
-        <label class="field" for="f-ptype"><span>Type d'animal <span class="opt">(facultatif)</span></span>
-          <select id="f-ptype" name="ptype">
-            <option value="">Choisir…</option>
-            <option value="pDog">Chien</option>
-            <option value="pCat">Chat</option>
-            <option value="pBird">Oiseau</option>
-            <option value="pRabbit">Lapin</option>
-            <option value="pHorse">Cheval</option>
-            <option value="pCow">Vache</option>
-            <option value="pCamel">Chameau</option>
-            <option value="pSheep">Mouton</option>
-            <option value="pGoat">Chèvre</option>
-            <option value="pOther">Autre</option>
-          </select></label>
-        <label class="field" for="f-pname"><span>Nom de l'animal <span class="opt">(facultatif)</span></span><input id="f-pname" name="pname" type="text" maxlength="60"></label>
-        <label class="field full" for="f-reason"><span>Motif de la visite</span>
-          <select id="f-reason" name="reason" required>
-            <option value="">Choisir…</option>
-            <option value="rCheck">Consultation</option>
-            <option value="rVacc">Vaccination</option>
-            <option value="rSurg">Chirurgie ou stérilisation</option>
-            <option value="rDent">Soins dentaires</option>
-            <option value="rSick">Mon animal semble malade</option>
-          </select></label>
-        <label class="field" for="f-date"><span>Date souhaitée <span class="opt">(facultatif)</span></span><input id="f-date" name="date" type="date"></label>
-        <label class="field" for="f-time"><span>Heure souhaitée <span class="opt">(facultatif)</span></span>
-          <select id="f-time" name="time">
-            <option value="">Choisir…</option>
-            <option value="tmAm">Matin (08:30–12:00)</option>
-            <option value="tmPm">Midi (12:00–14:00)</option>
-            <option value="tmEve">Après-midi (14:00–16:00)</option>
-          </select></label>
-        <label class="field full" for="f-notes"><span>Remarques <span class="opt">(facultatif)</span></span><textarea id="f-notes" name="notes" maxlength="500"></textarea></label>
-        <div class="hp" aria-hidden="true"><label for="f-website">Website<input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
-        <div class="full">
-          <button class="btn" id="submitBtn" type="submit">Demander un rendez-vous</button>
-          <p class="privacy">Nous utilisons vos informations uniquement pour organiser votre visite.</p>
-        </div>
-        <div class="result" id="result" role="status" aria-live="polite" hidden>
-          <h3 id="resH"></h3>
-          <dl id="resList"></dl>
-          <p class="note flush" id="resNote"></p>
-          <div class="actions">
-            <a class="btn btn-ghost btn-sm" id="resWa" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer">Envoyer sur WhatsApp</a>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
 
   <section class="sec alt" id="contact">
     <div class="wrap contact">

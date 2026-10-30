@@ -251,7 +251,6 @@ footer { border-top: 1px solid var(--line); padding-block: 1.4rem; font-size: 0.
 @keyframes drift-d { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(-16vmax, 20vmax, 0) scale(1.25); } }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } .bg span:nth-child(n) { animation: none; } }
-.foot-queue { color: var(--cyan-deep); font-weight: 600; text-underline-offset: 3px; }
 
 /* Phones: a smaller, one-line menu that slides away while scrolling down */
 @media (max-width: 899px) {

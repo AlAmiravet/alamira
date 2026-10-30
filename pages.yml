@@ -31,8 +31,8 @@ jobs:
       - name: Assemble site
         run: |
           mkdir _site
-          cp index.html styles.css app.js queue.js queue.css _site/
-          cp -r fr en queue assets screenshots _site/
+          cp index.html styles.css app.js _site/
+          cp -r fr en assets screenshots _site/
           cp sitemap.xml robots.txt _site/ 2>/dev/null || true
 
       - uses: actions/configure-pages@v5

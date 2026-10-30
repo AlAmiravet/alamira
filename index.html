@@ -36,7 +36,6 @@
         <span><b>الأميرة</b><small>عيادة بيطرية</small></span>
       </a>
       <nav class="links" aria-label="التنقل الرئيسي">
-        <a href="/queue/">قائمة الانتظار</a>
         <a href="#services">الخدمات</a>
         <a href="#vaccines">اللقاحات</a>
         <a href="#contact">اتصل بنا</a>
@@ -46,7 +45,6 @@
         <a href="fr/" hreflang="fr" lang="fr" aria-label="Français">FR</a>
         <a href="en/" hreflang="en" lang="en" aria-label="English">EN</a>
       </nav>
-      <a class="btn btn-sm" href="#book">احجز زيارة</a>
     </div>
   </header>
 
@@ -58,8 +56,7 @@
         <h1>نعتني بحيواناتك كأنهم من العائلة.</h1>
         <p class="lead">فحوصات ولقاحات وجراحة للحيوانات الأليفة والخيول والأبقار والإبل والأغنام والماعز.</p>
         <div class="cta-row">
-          <a class="btn" href="#book">احجز موعدًا</a>
-          <a class="btn btn-ghost" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>احجز عبر واتساب</span></a>
+          <a class="btn" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>احجز عبر واتساب</span></a>
         </div>
       </div>
       <div class="hero-art">
@@ -110,68 +107,6 @@
     </div>
   </section>
 
-  <section class="sec" id="book">
-    <div class="wrap book">
-      <div>
-        <div class="sec-head">
-          <p class="eyebrow">احجز زيارة</p>
-          <h2>احجز زيارة</h2>
-          <p>أخبرنا بما يحتاجه حيوانك. نؤكد الموعد عبر الهاتف أو واتساب.</p>
-        </div>
-        <a class="btn btn-ghost" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer"><img class="ic" src="assets/icons/whatsapp.svg" alt="" width="20" height="20"><span>احجز عبر واتساب</span></a>
-      </div>
-      <form class="form" id="bookForm" autocomplete="on" data-endpoint="https://script.google.com/macros/s/AKfycbydQ9_32H1WH21QzYs-0HPSAJdrwkbfhAsj8VvC8P7zRd-_R9oCb7mFcWs6txeoKUyg5Q/exec" data-wa="213673057556">
-        <label class="field" for="f-owner"><span>اسمك</span><input id="f-owner" name="owner" type="text" autocomplete="name" maxlength="80" required></label>
-        <label class="field" for="f-phone"><span>الهاتف</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" maxlength="30" pattern="[0-9+ ]{8,30}" required></label>
-        <label class="field" for="f-ptype"><span>نوع الحيوان <span class="opt">(اختياري)</span></span>
-          <select id="f-ptype" name="ptype">
-            <option value="">اختر…</option>
-            <option value="pDog">كلب</option>
-            <option value="pCat">قط</option>
-            <option value="pBird">طائر</option>
-            <option value="pRabbit">أرنب</option>
-            <option value="pHorse">حصان</option>
-            <option value="pCow">بقرة</option>
-            <option value="pCamel">جمل</option>
-            <option value="pSheep">غنم</option>
-            <option value="pGoat">ماعز</option>
-            <option value="pOther">أخرى</option>
-          </select></label>
-        <label class="field" for="f-pname"><span>اسم الحيوان <span class="opt">(اختياري)</span></span><input id="f-pname" name="pname" type="text" maxlength="60"></label>
-        <label class="field full" for="f-reason"><span>سبب الزيارة</span>
-          <select id="f-reason" name="reason" required>
-            <option value="">اختر…</option>
-            <option value="rCheck">فحص عام</option>
-            <option value="rVacc">تطعيم</option>
-            <option value="rSurg">جراحة أو تعقيم</option>
-            <option value="rDent">العناية بالأسنان</option>
-            <option value="rSick">حيواني يبدو مريضًا</option>
-          </select></label>
-        <label class="field" for="f-date"><span>التاريخ المفضل <span class="opt">(اختياري)</span></span><input id="f-date" name="date" type="date"></label>
-        <label class="field" for="f-time"><span>الوقت المفضل <span class="opt">(اختياري)</span></span>
-          <select id="f-time" name="time">
-            <option value="">اختر…</option>
-            <option value="tmAm">صباحًا (08:30–12:00)</option>
-            <option value="tmPm">ظهرًا (12:00–14:00)</option>
-            <option value="tmEve">عصرًا (14:00–16:00)</option>
-          </select></label>
-        <label class="field full" for="f-notes"><span>ملاحظات <span class="opt">(اختياري)</span></span><textarea id="f-notes" name="notes" maxlength="500"></textarea></label>
-        <div class="hp" aria-hidden="true"><label for="f-website">Website<input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
-        <div class="full">
-          <button class="btn" id="submitBtn" type="submit">اطلب موعدًا</button>
-          <p class="privacy">نستخدم بياناتك فقط لترتيب زيارتك.</p>
-        </div>
-        <div class="result" id="result" role="status" aria-live="polite" hidden>
-          <h3 id="resH"></h3>
-          <dl id="resList"></dl>
-          <p class="note flush" id="resNote"></p>
-          <div class="actions">
-            <a class="btn btn-ghost btn-sm" id="resWa" href="https://wa.me/213673057556" target="_blank" rel="noopener noreferrer">أرسل التفاصيل عبر واتساب</a>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
 
   <section class="sec alt" id="contact">
     <div class="wrap contact">
